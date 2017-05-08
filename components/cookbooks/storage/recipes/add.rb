@@ -211,6 +211,7 @@ Array(1..slice_count).each do |i|
       end
     end
     volume = node.storage_provider.volumes.new :device => dev, :size => slice_size, :availability_zone => avail_zone
+    volume.save
   end
 
   if node.storage_provider_class =~ /azure/
