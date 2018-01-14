@@ -200,11 +200,6 @@ module Fqdn
             else
              dns_record = attrs[:public_ip]
             end
-    
-            if location == ".int" || dns_entry == nil || dns_entry.empty?
-              dns_record = attrs[:private_ip]
-            end
-    
           when /Lb/
             dns_record = attrs[:dns_record]
           when /Cluster/
